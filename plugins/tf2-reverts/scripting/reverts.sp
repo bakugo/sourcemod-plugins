@@ -109,7 +109,7 @@ Handle cvar_ref_tf_feign_death_damage_scale;
 Handle cvar_ref_tf_feign_death_duration;
 Handle cvar_ref_tf_feign_death_speed_duration;
 Handle cvar_ref_tf_fireball_radius;
-Handle cvar_ref_tf_parachute_aircontrol;
+Handle cvar_ref_tf_parachute_maxspeed_xy;
 Handle cvar_ref_tf_parachute_maxspeed_onfire_z;
 Handle cvar_ref_tf_scout_hype_mod;
 Handle cookie_reverts[3];
@@ -210,7 +210,7 @@ public void OnPluginStart() {
 	cvar_ref_tf_feign_death_duration = FindConVar("tf_feign_death_duration");
 	cvar_ref_tf_feign_death_speed_duration = FindConVar("tf_feign_death_speed_duration");
 	cvar_ref_tf_fireball_radius = FindConVar("tf_fireball_radius");
-	cvar_ref_tf_parachute_aircontrol = FindConVar("tf_parachute_aircontrol");
+	cvar_ref_tf_parachute_maxspeed_xy = FindConVar("tf_parachute_maxspeed_xy");
 	cvar_ref_tf_parachute_maxspeed_onfire_z = FindConVar("tf_parachute_maxspeed_onfire_z");
 	cvar_ref_tf_scout_hype_mod = FindConVar("tf_scout_hype_mod");
 	
@@ -865,7 +865,7 @@ public void OnGameFrame() {
 			// these cvars are global, set them to the desired value
 			SetConVarMaybe(cvar_ref_tf_bison_tick_time, "0.001", ItemIsEnabled("bison", 0));
 			SetConVarMaybe(cvar_ref_tf_fireball_radius, "30.0", ItemIsEnabled("dragonfury", 0));
-			SetConVarMaybe(cvar_ref_tf_parachute_aircontrol, "5", ItemIsEnabled("basejump", 0));
+			SetConVarMaybe(cvar_ref_tf_parachute_maxspeed_xy, "400.0", ItemIsEnabled("basejump", 0));
 		}
 	}
 }
